@@ -1,5 +1,5 @@
 # ds-shared-infrastructure
-This repository is a shared infrastructure for adoption services.
+This repository is a shared infrastructure for document submission services.
 
 ## Variables
 

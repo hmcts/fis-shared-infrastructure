@@ -1,0 +1,7 @@
+#!groovy
+//noinspection GroovyUnusedAssignment
+@Library("Infrastructure") _
+
+withInfraPipeline("ds") {
+  enableSlackNotifications("#family-integration-cicd-notice")
+}

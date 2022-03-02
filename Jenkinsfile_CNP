@@ -5,9 +5,8 @@
 def branchesToSync = ['demo', 'perftest']
 
 withInfraPipeline("ds") {
+  syncBranchesWithMaster(branchesToSync)
   enableSlackNotifications("#family-integration-cicd-notice")
 }
 
-withPipeline(type, product, component) {
-  syncBranchesWithMaster(branchesToSync)
-}
+

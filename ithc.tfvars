@@ -1,8 +1,8 @@
-ds_external_hostname = "ds-web.ithc.platform.hmcts.net"
-ds_external_cert_name = "wildcard-ithc-platform-hmcts-net"
-ds_external_cert_vault_uri = "https://infra-vault-qa.vault.azure.net/"
+fis_external_hostname = "fis-web.ithc.platform.hmcts.net"
+fis_external_cert_name = "wildcard-ithc-platform-hmcts-net"
+fis_external_cert_vault_uri = "https://infra-vault-qa.vault.azure.net/"
 
-legal_external_hostname = "ds-legal.ithc.platform.hmcts.net"
+legal_external_hostname = "fis-legal.ithc.platform.hmcts.net"
 legal_external_cert_name = "wildcard-ithc-platform-hmcts-net"
 legal_external_cert_vault_uri = "https://infra-vault-qa.vault.azure.net/"
 

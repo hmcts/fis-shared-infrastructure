@@ -16,5 +16,5 @@ resource "azurerm_application_insights" "appinsights" {
 resource "azurerm_key_vault_secret" "appInsights-InstrumentationKey" {
   name         = "AppInsightsInstrumentationKey"
   value        = azurerm_application_insights.appinsights.instrumentation_key
-  key_vault_id = module.ds-app-vault.key_vault_id
+  key_vault_id = module.fis-app-vault.key_vault_id
 }

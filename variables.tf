@@ -43,9 +43,9 @@ variable "asp_capacity" {
   default = 2
 }
 
-variable "ds_external_hostname" {}
-variable "ds_external_cert_name" {}
-variable "ds_external_cert_vault_uri" {}
+variable "fis_external_hostname" {}
+variable "fis_external_cert_name" {}
+variable "fis_external_cert_vault_uri" {}
 variable "legal_external_hostname" {}
 variable "legal_external_cert_name" {}
 variable "legal_external_cert_vault_uri" {}

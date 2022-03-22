@@ -1,4 +1,4 @@
-module "ds-app-vault" {
+module "fis-app-vault" {
   source                     = "git@github.com:hmcts/cnp-module-key-vault?ref=master"
   name                       = "${var.product}-${var.env}"
   product                    = var.product
@@ -13,5 +13,5 @@ module "ds-app-vault" {
 }
 
 output "vaultName" {
-  value = module.ds-app-vault.key_vault_name
+  value = module.fis-app-vault.key_vault_name
 }

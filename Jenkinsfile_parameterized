@@ -9,4 +9,4 @@ properties([
 		])
 ])
 
-sharedInfrastructurePipeline('ds', params.ENVIRONMENT, 'sandbox')
+sharedInfrastructurePipeline('fis', params.ENVIRONMENT, 'sandbox')

@@ -1,0 +1,11 @@
+
+.idea/
+*.iml
+
+*swp
+*log
+.DS_Store
+
+.vscode
+
+coverage

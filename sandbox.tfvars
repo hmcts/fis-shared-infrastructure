@@ -1,8 +1,8 @@
-ds_external_hostname = "ds-ui.sandbox.platform.hmcts.net"
-ds_external_cert_name = "STAR-sandbox-platform-hmcts-net"
-ds_external_cert_vault_uri = "https://infra-vault-sandbox.vault.azure.net/"
+fis_external_hostname = "document-submission-web.sandbox.platform.hmcts.net"
+fis_external_cert_name = "STAR-sandbox-platform-hmcts-net"
+fis_external_cert_vault_uri = "https://infra-vault-sandbox.vault.azure.net/"
 
-legal_external_hostname = "ds-legal.sandbox.platform.hmcts.net"
+legal_external_hostname = "fis-legal.sandbox.platform.hmcts.net"
 legal_external_cert_name = "STAR-sandbox-platform-hmcts-net"
 legal_external_cert_vault_uri = "https://infra-vault-sandbox.vault.azure.net/"
 

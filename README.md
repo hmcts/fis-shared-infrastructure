@@ -1,4 +1,4 @@
-# ds-shared-infrastructure
+# fis-shared-infrastructure
 This repository is a shared infrastructure for document submission services.
 
 ## Variables
@@ -13,7 +13,7 @@ The following parameters are required by this module
 
 The following parameters are optional
 
-- `product` The (short) name of the product. Default is "ds". 
+- `product` The (short) name of the product. Default is "fis". 
 - `location` The location of the Azure data center. Default is "UK South".
 - `appinsights_location` Location for Application Insights. Default is "West Europe".
 - `application_type` Type of Application Insights (Web/Other). Default is "Web".

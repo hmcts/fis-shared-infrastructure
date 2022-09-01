@@ -4,7 +4,7 @@
 
 def branchesToSync = ['demo', 'perftest']
 
-withInfraPipeline("fis") {
+withInfraPipeline("fiservice") {
   syncBranchesWithMaster(branchesToSync)
   enableSlackNotifications("#family-integration-cicd-notice")
 }

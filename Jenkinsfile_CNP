@@ -2,11 +2,10 @@
 //noinspection GroovyUnusedAssignment
 @Library("Infrastructure") _
 
+def product = 'fis'
 def branchesToSync = ['demo', 'perftest']
 
-withInfraPipeline("fis") {
+withInfraPipeline(product) {
   syncBranchesWithMaster(branchesToSync)
-  enableSlackNotifications("#family-integration-cicd-notice")
+  enableSlackNotifications("family-integration-cicd-notice")
 }
-
-

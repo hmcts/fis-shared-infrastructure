@@ -1,62 +1,31 @@
-variable "product" {}
+variable "common_tags" {
+  type = map(string)
+}
+
+variable "product" {
+  default = "fis"
+}
+variable "env" {}
+variable "tenant_id" {}
 
 variable "location" {
   default = "UK South"
 }
 
-// as of now, UK South is unavailable for Application Insights
-variable "appinsights_location" {
-  default     = "West Europe"
-  description = "Location for Application Insights"
-}
-
-variable "common_tags" {
-  type = map
-}
-
-variable "env" {}
-
-variable "application_type" {
-  default     = "web"
-  description = "Type of Application Insights (Web/Other)"
-}
-
-variable "tenant_id" {
-  description = "(Required) The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault. This is usually sourced from environment variables and not normally required to be specified."
+variable "managed_identity_object_id" {
+  default = ""
 }
 
 variable "jenkins_AAD_objectId" {
   description = "(Required) The Azure AD object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies."
 }
 
-variable "subscription" {}
-
-variable "team_contact" {
-  default = "#family-integration-cicd-notice"
+variable "appinsights_location" {
+  default     = "West Europe"
+  description = "Location for Application Insights"
 }
 
-variable "name" {
+variable "custom_alerts_enabled" {
+  description = "If set to true, enable alerts"
   default = false
-}
-
-variable "asp_capacity" {
-  default = 2
-}
-
-variable "fis_external_hostname" {}
-variable "fis_external_cert_name" {}
-variable "fis_external_cert_vault_uri" {}
-variable "legal_external_hostname" {}
-variable "legal_external_cert_name" {}
-variable "legal_external_cert_vault_uri" {}
-
-variable "ilbIp" {}
-
-variable "managed_identity_object_id" {
-  default = ""
-}
-
-variable "sku" {
-  default     = "standard"
-  description = "The Name of the SKU used for this Key Vault. Possible values are standard and premium."
 }

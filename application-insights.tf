@@ -15,8 +15,8 @@ resource "azurerm_application_insights" "appinsights" {
   }
 }
 
-resource "azurerm_key_vault_secret" "appInsights-InstrumentationKey" {
-  name         = "AppInsightsInstrumentationKey"
-  value        = azurerm_application_insights.appinsights.instrumentation_key
-  key_vault_id = module.fis-kv-vault.key_vault_id
-}
+# resource "azurerm_key_vault_secret" "appInsights-InstrumentationKey" {
+#  name         = "AppInsightsInstrumentationKey"
+#  value        = azurerm_application_insights.appinsights.instrumentation_key
+#  key_vault_id = module.fis-kv-vault.key_vault_id
+# }

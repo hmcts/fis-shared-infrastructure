@@ -29,3 +29,7 @@ variable "custom_alerts_enabled" {
   description = "If set to true, enable alerts"
   default = false
 }
+
+variable "citizen_component" {
+  default = "ds-update-web"
+}

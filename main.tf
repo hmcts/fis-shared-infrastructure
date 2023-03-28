@@ -19,29 +19,6 @@ module "key-vault" {
   create_managed_identity    = true
 }
 
-resource "azurerm_key_vault_secret" "AZURE_APPINSIGHTS_KEY" {
-  name         = "AppInsightsInstrumentationKey"
-  value        = azurerm_application_insights.appinsights.instrumentation_key
-  key_vault_id = module.key-vault.key_vault_id
-}
-
-resource "azurerm_application_insights" "appinsights" {
-  name                = "${var.product}-appinsights-${var.env}"
-  location            = var.appinsights_location
-  resource_group_name = azurerm_resource_group.rg.name
-  application_type    = "web"
-
-  tags = var.common_tags
-
-  lifecycle {
-    ignore_changes = [
-      # Ignore changes to appinsights as otherwise upgrading to the Azure provider 2.x
-      # destroys and re-creates this appinsights instance..
-      application_type,
-    ]
-  }
-}
-
 data "azurerm_key_vault" "key_vault" {
   name                = "${var.product}-${var.env}" # update these values if required
   resource_group_name = "${var.product}-${var.env}" # update these values if required
@@ -60,10 +37,4 @@ module "fis-ds-update-web-session-storage" {
   env      = var.env
   subnetid = data.azurerm_subnet.core_infra_redis_subnet.id
   common_tags  = var.common_tags
-}
-
-resource "azurerm_key_vault_secret" "redis_access_key" {
-  name         = "redis-access-key"
-  value        = module.fis-ds-update-web-session-storage.access_key
-  key_vault_id = data.azurerm_key_vault.key_vault.id
 }

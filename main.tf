@@ -20,7 +20,7 @@ module "key-vault" {
 }
 
 data "azurerm_key_vault" "key_vault" {
-  name                = "${var.product}-${var.env}" # update these values if required
+  name                = "${var.product}-kv-${var.env}" # update these values if required
   resource_group_name = "${var.product}-${var.env}" # update these values if required
 }
 

@@ -8,8 +8,10 @@ module "fis-kv-vault" {
   resource_group_name        = azurerm_resource_group.rg.name
   product_group_name         = "DTS Family Integration"
   common_tags                = var.common_tags
-  create_managed_identity    = true
-  // managed_identity_object_id = var.managed_identity_object_id
+
+  create_managed_identity              = true
+  additional_managed_identities_access = var.additional_managed_identities_access
+  // managed_identity_object_id        = var.managed_identity_object_id
 }
 
 output "vaultName" {

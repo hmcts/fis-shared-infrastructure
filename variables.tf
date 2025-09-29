@@ -27,7 +27,7 @@ variable "appinsights_location" {
 
 variable "custom_alerts_enabled" {
   description = "If set to true, enable alerts"
-  default = false
+  default     = false
 }
 
 variable "additional_managed_identities_access" {

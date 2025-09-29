@@ -10,6 +10,7 @@ module "fis-kv-vault" {
   common_tags                = var.common_tags
   create_managed_identity    = true
   // managed_identity_object_id = var.managed_identity_object_id
+  additional_managed_identities_access = var.additional_managed_identities_access
 }
 
 output "vaultName" {
